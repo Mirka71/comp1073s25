@@ -1,19 +1,8 @@
 const output = document.querySelector('#output');
 
 /* STEP 1: Create an object (looks a lot like declaring a variable, but with empty braces), then open this page in a browser and enter 'Coffee' in the console */
-function Coffee(size, isDecaf, qtyCream, qtySugar) {
-    this.size = size;
-    this.isDecaf = isDecaf;
-    this.qtyCream = qtySugar;
-    this.decaf = this.isDecaf ? "decaffeinated" : "caffeinated";
-    this.description = function () {
-        // A medium sized caffeinated coffee with 1 cream and 2 sugar
-        return `A ${this.size} sized ${this.decaf} coffee with ${this.qtyCream} cream and ${this.qtySugar} sugar.`;
-    };
-}
 
 /* STEP 2: Instatiate a coffee based on the above constructor function */
-let priCoffee = new Coffee("medium", false, 2, 1);
 
 /* STEP 3: Refresh the page, and in the console, begin to call a method on scottsCoffee by typing 'scottsCoffee.' - look at all the members and methods */
 
@@ -28,10 +17,6 @@ let priCoffee = new Coffee("medium", false, 2, 1);
 /* STEP 6a: Let's circle back to create() - use scottsCoffee to create a new object instance - one based on scottsCoffee. */
 
 /* STEP 6b: See how this new object inherits from the prototype with richsCoffee.__proto__ in the console. */
-let robertCoffee = Object.create(priCoffee);
-robertCoffee.isDecaf = true;
-robertCoffee.qtyCream = 1;
-robertCoffee.qtySugar = 0;
 
 /* STEP 7a: Each constructor function includes a prototype property with a value equal to an object that contains a constructor property. Try it out by typing scottsCoffee.constructor and richsCoffee.constructor */
 

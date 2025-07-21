@@ -1,28 +1,7 @@
 const output = document.querySelector('#output');
 
 /* STEP 1: Instead of a constructor function, let's try a JavaScript class called 'Coffee' */
-class Coffee{
-    // attributes
-    size;
-    isDecaf;
-    //constructor
-    consctructor(size, isDecaf){
-        this.size = size;
-        this.isDecaf = isDecaf;
-    }
 
-    //methods 
-    //Add a serveIt method
-    serveIt() {
-        //generate an IMG of the coffee ordered
-        let cup = documentcreateElement("img"); //<img>
-
-        //set the src path for the IMG element
-        cup.setAttribute("src", "images/coffee-cup.svg");
-        cup.setAttribute("alt", "A coffee"); //img src="images/coffee-cup.svg"
-        
-    }
-}
 /* STEP 2: Instatiate a coffee based on the above constructor function */
 
 /* STEP 3: Add a method to the Coffee class called serveIt() */
