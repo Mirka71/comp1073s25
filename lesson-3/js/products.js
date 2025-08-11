@@ -2,17 +2,15 @@
 // STEP 1a: Grab the parts of the DOM that we need to build the invoice
 const productList = document.querySelector("tbody");
 const totalData = document.querySelector("tfoot td:first-of-type");
-
 // STEP 1b: Build the products array in the format 'Product Name:0.00'
 let products = [
 	"Frozen Pizza: 5.99",
 	"Orange Juice: 7.95",
 	"Milk: 6.95",
 	"Dozen Eggs: 6.95",
-	"Bacon: 7.95",
+	"Bacon: 7.49",
 	"Kiwi Fruit: 3.95"
 ];
-
 // STEP 1c: Set up invoiceTotal variable - start at zero
 let invoiceTotal = 0;
 // STEP 1d: Declare the itemRow and the itemDetail array;
@@ -27,12 +25,12 @@ for (let i = 0; i < products.length; i ++) {
 	products[i] = products[i].split(": ");
 	// STEP 4: Now we have an array as an element of an array - set the second array element to the product price (as type number)
 	products[i][1] = Number(products[i][1]);
-	console.log(products[i][0] + " " + products[i][1]);
+	// console.log(products[i][0] + " " + products[i][1]);
 	// STEP 5: Add the price of this product to the invoice total
 	invoiceTotal += products[i][1];
-	console.log(invoiceTotal);
+	// console.log(invoiceTotal);
 	// STEP 6: Capture each product name and price as variables 
-	itemDesc= products[i][0];
+	itemDesc = products[i][0];
 	itemPrice = products[i][1];
 	// STEP 7: Create a TR element for this product and price in the invoice table
 	itemRow[i] = document.createElement("tr");

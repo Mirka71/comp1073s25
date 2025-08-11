@@ -5,6 +5,7 @@ const elem = document.querySelector('h1');
 function random(number) {
     return Math.floor(Math.random()*(number + 1));
 }
+
 /* STEP 1a: Event Objects
 Modify the below function to allow it to accept the event as a parameter or argument (named "event" in this case), then change the background color of the event.target instead of the document body */
 function bgChange(event) {
@@ -34,6 +35,7 @@ form.addEventListener("submit", function(event) {
         para.textContent = "You forgot to type an email address.";
     };
 });
+
 // Next, open up gallery.html...
 
 // This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
